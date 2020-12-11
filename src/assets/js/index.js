@@ -27,7 +27,7 @@ function insertInHTML(json) {
 }
 
 function searchClimate(latitude, longitude) {   
-  const baseUrl = `https://api.hgbrasil.com/weather?key=bcd84e26&lat=${latitude}&lon=${longitude}&user_ip=remote`
+  const baseUrl = `https://api.hgbrasil.com/weather?key=09ca2405&lat=${latitude}&lon=${longitude}&user_ip=remote`
 
   fetch(proxyUrl + baseUrl)
     .then(res => res.json())
@@ -43,7 +43,7 @@ function searchClimate(latitude, longitude) {
 }
 
 function searchCityName(name, state) {
-  fetch(proxyUrl + `https://api.hgbrasil.com/weather?key=bcd84e26&city_name=${name},${state}`)
+  fetch(proxyUrl + `https://api.hgbrasil.com/weather?key=09ca2405&city_name=${name},${state}`)
     .then(res => res.json())
     .then(json => {
       json.results.currently === 'noite' ? $('.card-container').css('background-image', `url(${imgNight})`) : null
